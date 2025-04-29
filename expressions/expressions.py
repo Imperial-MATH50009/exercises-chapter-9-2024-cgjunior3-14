@@ -1,5 +1,6 @@
 import numbers
 
+
 class Expression:
     def __init__(self, operands):
         self.operands = operands
@@ -9,7 +10,7 @@ class Expression:
 
     def __sub__(a, b):
         return Sub(a, b)
-    
+
     def __mul__(a, b):
         return Mul(a, b)
 
@@ -26,20 +27,26 @@ class Operator(Expression):
     def __repr__(self):
         return type(self).__name__ + repr(self.operands)
 
+
 class Add(Operator):
+    super().__init__([])
 
 
 class Sub(Operator):
+    super().__init__([])
 
 
 class Mul(Operator):
+    super().__init__([])
 
 
 class Div(Operator):
+    super().__init__([])
 
 
 class Pow(Operator):
-    
+    super().__init__([])
+
 
 class Terminal(Expression):
     def __init__(self, value):
